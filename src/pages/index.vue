@@ -2,7 +2,7 @@
   <RouterLink to="/">Home</RouterLink>
   <RouterLink to="/about">About</RouterLink>
   <div>{{ msg }}</div>
-  <div ref="target" class="p-5 bg-sky-500">
+  <div ref="target" class="p-5 bg-sky-300">
     <h1>Hello world</h1>
     x:{{ x }}
     y:{{ y }}
