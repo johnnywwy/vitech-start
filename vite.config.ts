@@ -3,11 +3,13 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vuejsx from "@vitejs/plugin-vue-jsx";
+
 import UnoCSS from "unocss/vite";
 
-// import Pages from "vite-plugin-pages";
-
 import VueRouter from "unplugin-vue-router/vite";
+import AutoImport from "unplugin-auto-import/vite";
+
+import { VueRouterAutoImports } from "unplugin-vue-router";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,8 +20,16 @@ export default defineConfig({
     vue(),
     vuejsx(),
     UnoCSS(),
-
-    // Pages({dirs: ["src/views"]}),
+    AutoImport({
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+      ],
+      dts: true,
+      imports: ["vue", VueRouterAutoImports, "@vueuse/core"],
+    }),
   ],
   resolve: {
     alias: {
