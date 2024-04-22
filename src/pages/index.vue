@@ -1,7 +1,7 @@
 <template>
-  <div>
-    hello world by vite-plugin-pages
-  </div>
+  <div>Hello world</div>
+  <RouterLink to="/">Home</RouterLink>
+  <RouterLink to="/about">About</RouterLink>
 </template>
 
 <script setup lang='ts'>
