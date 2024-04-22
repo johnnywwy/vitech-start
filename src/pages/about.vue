@@ -1,11 +1,8 @@
 <template>
   <div class='about'>
     <h1>This is an about page</h1>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
     <div class="p-8 text-3xl bg-gray-500">
       hello unocss
-
     </div>
   </div>
 </template>
@@ -24,5 +21,5 @@
 
 <route lang="yaml">
   meta:
-    layout: home
+    layout: default
 </route>

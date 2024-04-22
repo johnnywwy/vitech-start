@@ -11,6 +11,7 @@
   "dependencies": {
     "@unocss/reset": "0.59.4",
     "@vueuse/core": "10.9.0",
+    "mockjs": "1.1.0",
     "pinia": "2.1.7",
     "reset-css": "5.0.2",
     "vue": "^3.4.21",
@@ -37,6 +38,7 @@
     "unplugin-vue-components": "0.26.0",
     "unplugin-vue-router": "0.8.6",
     "vite": "^5.2.0",
+    "vite-plugin-mock": "3.0.2",
     "vite-plugin-pages": "0.32.1",
     "vite-plugin-pwa": "0.19.8",
     "vite-plugin-vue-layouts": "0.11.0",

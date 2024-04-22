@@ -1,6 +1,7 @@
 <template>
   <div>
-    default layout 哈哈哈哈
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
     <RouterView />
   </div>
 </template>
