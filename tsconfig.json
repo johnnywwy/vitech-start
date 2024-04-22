@@ -10,7 +10,9 @@
     "moduleResolution": "bundler",
     "types": [
       // ...
-      "unplugin-vue-router/client"
+      "unplugin-vue-router/client",
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pwa/client"
     ],
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

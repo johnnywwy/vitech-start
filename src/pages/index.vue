@@ -29,6 +29,7 @@
 </template>
 
 <script setup lang='ts'>
+import { registerSW } from 'virtual:pwa-register'
 
 const target = ref(null)
 
@@ -39,7 +40,38 @@ const { x, y, isOutside } = useMouseInElement(target)
 // const { x, y, isOut } = useMouseInElenent(target)
 
 
+onMounted(() => {
+  console.log('我来了');
+
+  registerSW({
+    immediate: true,
+
+    onNeedRefresh() {
+      // 显示刷新按钮
+      console.log('需要进行刷新了');
+    },
+
+    onRegisteredSW(url, registration) {
+
+      console.log('hfhfdhfhhfhf', url, registration);
+
+
+      setInterval(() => {
+        registration?.update()
+
+      }, 5000)
+    }
+  })
+})
+
+
 
 </script>
 
 <style scoped></style>
+
+
+<route lang="yaml">
+  meta:
+    layout: default
+</route>

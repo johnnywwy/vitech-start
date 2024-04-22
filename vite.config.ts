@@ -15,6 +15,10 @@ import Components from "unplugin-vue-components/vite";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 
+import Layouts from "vite-plugin-vue-layouts";
+
+import { VitePWA } from "vite-plugin-pwa";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -47,10 +51,25 @@ export default defineConfig({
       /* options */
       autoInstall: true,
     }),
+    Layouts({
+      layoutsDirs: "src/layouts",
+      defaultLayout: "default",
+    }),
+    VitePWA({
+      registerType: "autoUpdate",
+      devOptions: {
+        enabled: true,
+      },
+    }),
   ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // build: {
+  //   rollupOptions: {
+  //     external: ["workbox-window"],
+  //   },
+  // },
 });
