@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vuejsx from "@vitejs/plugin-vue-jsx";
+import UnoCSS from "unocss/vite";
 
 // import Pages from "vite-plugin-pages";
 
@@ -16,6 +17,8 @@ export default defineConfig({
     }),
     vue(),
     vuejsx(),
+    UnoCSS(),
+
     // Pages({dirs: ["src/views"]}),
   ],
   resolve: {
