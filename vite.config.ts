@@ -56,10 +56,10 @@ export default defineConfig({
       defaultLayout: "default",
     }),
     VitePWA({
-      registerType: "autoUpdate",
-      devOptions: {
-        enabled: true,
-      },
+      // registerType: "autoUpdate",
+      // devOptions: {
+      //   enabled: true,
+      // },
     }),
   ],
   resolve: {

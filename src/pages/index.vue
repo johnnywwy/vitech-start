@@ -25,6 +25,10 @@
     y:{{ y }}
     isOutside:{{ isOutside }}
   </div>
+  <div>
+    <ReloadPrompt />
+    hello
+  </div>
 
 </template>
 
@@ -46,10 +50,10 @@ onMounted(() => {
   registerSW({
     immediate: true,
 
-    onNeedRefresh() {
-      // 显示刷新按钮
-      console.log('需要进行刷新了');
-    },
+    // onNeedRefresh() {
+    //   // 显示刷新按钮
+    //   console.log('需要进行刷新了');
+    // },
 
     onRegisteredSW(url, registration) {
 
