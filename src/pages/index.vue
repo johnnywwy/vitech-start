@@ -4,7 +4,23 @@
   <div>{{ msg }}</div>
   <HelloWorld />
   <div ref="target" class="p-5 bg-sky-300">
-    <h1>Hello world</h1>
+    <h1>
+
+      <icon-mdi-account class="text-9xl color-red-500" />
+      <!-- A basic anchor icon from Phosphor icons -->
+      <div class="i-ph-anchor-simple-thin" />
+      <!-- An orange alarm from Material Design Icons -->
+      <div class="i-mdi-alarm text-orange-400" />
+      <!-- A large Vue logo -->
+      <div class="i-logos-vue text-3xl" />
+      <!-- Sun in light mode, Moon in dark mode, from Carbon -->
+      <button class="i-carbon-sun dark:i-carbon-moon" />
+      <!-- Twemoji of laugh, turns to tear on hovering -->
+      <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+
+      <div class="i-cil:3d w-2em h-2em" />
+      Hello world
+    </h1>
     x:{{ x }}
     y:{{ y }}
     isOutside:{{ isOutside }}
