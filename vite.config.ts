@@ -32,7 +32,8 @@ export default defineConfig({
       imports: ["vue", VueRouterAutoImports, "@vueuse/core"],
     }),
     Components({
-      /* options */
+      // directoryAsNamespace: true, //文件名前缀
+      // collapseSamePrefixes: true, //合并重复前缀
     }),
   ],
   resolve: {
